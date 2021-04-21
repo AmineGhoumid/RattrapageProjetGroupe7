@@ -1,0 +1,39 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:easysave"
+             x:Class="easysave.mainWindow"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="700">
+    <Grid>
+        <Label x:Name="versionlabel" Content="EasySave v3.0" HorizontalAlignment="Left" Margin="221,0,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="saveworknamelabel" Content="Save work name:" HorizontalAlignment="Left" Margin="136,86,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="saveworktypelabel" Content="Save work type:" HorizontalAlignment="Left" Margin="136,117,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="sourceDirectoryLabel" Content="Source directory:" HorizontalAlignment="Left" Margin="135,145,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="destinationlabel" Content="Destination :" HorizontalAlignment="Left" Margin="135,179,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="savebutton" Content="Register save work" HorizontalAlignment="Left" Margin="360,215,0,0" VerticalAlignment="Top" Width="122" PreviewMouseDown="savebuttonclick"/>
+        <TextBox x:Name="appellation" HorizontalAlignment="Left" Height="18" Margin="266,89,0,0" TextWrapping="Wrap" Text="The name of your save work" VerticalAlignment="Top" Width="330" PreviewMouseDown="textboxhint"/>
+        <TextBox x:Name="src" HorizontalAlignment="Left" Height="18" Margin="266,150,0,0" TextWrapping="Wrap" Text="UNC Format (C:\Users\xxx\directory\)" VerticalAlignment="Top" Width="330" PreviewMouseDown="textboxhint"/>
+        <TextBox x:Name="dest" HorizontalAlignment="Left" Height="18" Margin="266,180,0,0" TextWrapping="Wrap" Text="UNC Format (C:\Users\lxxx\where_to_save\)" VerticalAlignment="Top" Width="330" PreviewMouseDown="textboxhint"/>
+        <Label x:Name="registeredlabel" Content="Registered :" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="remove" Content="Delete last save work" HorizontalAlignment="Left" Margin="17,492,0,0" VerticalAlignment="Top" Width="121" PreviewMouseDown="removelastsave"/>
+        <ListBox x:Name="registeredSavePanel" HorizontalAlignment="Left" Height="228" Margin="97,247,0,0" VerticalAlignment="Top" Width="575" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Button x:Name="executelabel" Content="Execute all" HorizontalAlignment="Left" Margin="425,480,0,0" VerticalAlignment="Top" Width="123" PreviewMouseDown="executeall"/>
+        <Button x:Name="settingsButton" Content="Settings" HorizontalAlignment="Left" Margin="390,55,0,0" VerticalAlignment="Top" Width="75" PreviewMouseDown="settingsbuttonclick"/>
+        <CheckBox x:Name="type_diff_cbox" Content="Differential" HorizontalAlignment="Left" Margin="279,122,0,0" VerticalAlignment="Top" Checked="diff_cbox_checked"/>
+        <CheckBox x:Name="type_full_cbox" Content="Full" HorizontalAlignment="Left" Margin="475,122,0,0" VerticalAlignment="Top" Checked="full_cbox_checked"/>
+        <Button x:Name="execute_specific" Content="Execute specific" HorizontalAlignment="Left" Margin="159,492,0,0" VerticalAlignment="Top" Width="119" PreviewMouseDown="exec_specific_clicked"/>
+        <Button x:Name="pause_all_but" Content="Pause all" HorizontalAlignment="Left" Margin="425,505,0,0" VerticalAlignment="Top" Width="123" PreviewMouseDown="pauseall_but_clicked"/>
+        <Button x:Name="resume_all_but" Content="Resume all" HorizontalAlignment="Left" Margin="562,480,0,0" VerticalAlignment="Top" Width="117" PreviewMouseDown="resume_all_but_clicked"/>
+        <Button x:Name="stop_all_but" Content="Stop all" HorizontalAlignment="Left" Margin="562,505,0,0" VerticalAlignment="Top" Width="117" PreviewMouseDown="stop_all_clicked"/>
+
+    </Grid>
+</UserControl>

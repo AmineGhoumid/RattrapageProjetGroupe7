@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="easysave.execSpecificSaveControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" Width="738.167" Height="193.512">
+    <Grid Margin="0,0,0,10">
+        <TextBox x:Name="textbox" HorizontalAlignment="Left" Height="23" Margin="240,76,0,0" TextWrapping="Wrap" Text="1-5 or 5" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.646,0.317"/>
+        <Label x:Name="mainlabel" Content="Execute specific save " HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="savelabel" Content="Save(s) :" HorizontalAlignment="Left" Margin="134,72,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="savebut" Content="Save" HorizontalAlignment="Left" Margin="243,121,0,0" VerticalAlignment="Top" Width="117" PreviewMouseDown="savebut_PreviewMouseDown"/>
+
+    </Grid>
+</UserControl>
